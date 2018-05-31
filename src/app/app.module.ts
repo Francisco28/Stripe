@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { Stripe } from '@ionic-native/stripe';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +27,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    Stripe,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
