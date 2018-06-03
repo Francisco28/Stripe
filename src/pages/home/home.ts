@@ -10,7 +10,7 @@ import { Stripe } from '@ionic-native/stripe';
 export class HomePage {
 
 
-
+//Inserción de ejemplo
 /*
    card : any = {
     number: '4242424242424242',
@@ -26,11 +26,11 @@ export class HomePage {
    };
 
    */
-
+ //Objeto que contendrá el token
    cadena = {
     tokeng : ''
    }
-
+//Parametros de la transacción
    card :any = {
     number: '',
     expMonth: '',
@@ -41,7 +41,7 @@ export class HomePage {
    text:string = '';
 
   constructor(public navCtrl: NavController, private stripe: Stripe) {
-
+  //Empleo de la Api para publicar la clave
     this.stripe.setPublishableKey('pk_test_NArsQrKiBXVVifDUTU0kl5Z2');
 
   }
@@ -52,7 +52,7 @@ export class HomePage {
   }
   
   stripeSend(): void{
-    
+    //Envio de token
     this.stripe.createCardToken(this.card)
    .then(token => //console.log(token.id)
     {
